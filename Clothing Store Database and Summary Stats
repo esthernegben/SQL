@@ -1,0 +1,23 @@
+--create a clothing store database 
+
+CREATE TABLE esthersclothes (id INTEGER PRIMARY KEY, style TEXT, gender TEXT, price INTEGER, size TEXT, item_code INTEGER);
+
+INSERT INTO esthersclothes VALUES (0, "skirt", "Female", 10, "M", 3275);
+INSERT INTO esthersclothes VALUES (1, "trouser", "Female", 8.99, "S", 8764);
+INSERT INTO esthersclothes VALUES (2, "shirt", "Female", 35, "S", 3756);
+INSERT INTO esthersclothes VALUES (3, "top", "Female", 22, "L", 9827);
+INSERT INTO esthersclothes VALUES (4, "shirt", "Male", 15, "S", 2324);
+INSERT INTO esthersclothes VALUES (5, "trouser", "Male", 18, "S", 2324);
+INSERT INTO esthersclothes VALUES (6, "trouser", "Male", 19, "M", 8433);
+INSERT INTO esthersclothes VALUES (7, "trouser", "Female", 78, "L", 8222);
+INSERT INTO esthersclothes VALUES (8, "shirt", "Male", 8.99, "98", 8723);
+
+--display the database ordered by item code
+SELECT * FROM estherclothes
+ORDER BY item_code;
+
+--dispaly the number of items per gender in the databse
+SELECT gender, COUNT(gender) FROM estherclothes GROUP BY gender;
+
+--display items in the database with a price greater than 10
+SELECT * FROM estherclothes WHERE price > 10 ORDER BY price;
